@@ -1,4 +1,4 @@
-
+import functools
 import logging
 from itertools import permutations
 import os
@@ -17,6 +17,7 @@ logger.addHandler(file_handler)
 
 
 def timer(function):
+    @functools.wraps(function)
     def wraps(*args, **kwargs):
         start_time = time()
         res = function(*args, **kwargs)
@@ -24,6 +25,7 @@ def timer(function):
         logger.warning(f'{function.__name__} took {elapsed_time} seconds to complete')
         return res
     return wraps
+
 
 # solution with itertools
 @timer

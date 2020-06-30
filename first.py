@@ -52,7 +52,7 @@ def search_pairs(array: list, k: int) -> list:
     deductions_dict = {}
     res_list = []
     check_set = set()
-    # counter = Counter(array)
+    # TODO: we can see only numbers in (-k, k)
     # creating dict with deductions as keys
     for i in array:
         if k-i not in deductions_dict:

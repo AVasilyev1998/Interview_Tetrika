@@ -27,3 +27,6 @@ if __name__ == '__main__':
     print(get_zeros(5))
     print(get_zeros(12))
     print(get_zeros(25))
+    print(get_zeros(10000000))
+    # сложность алгоритма O(nlogn)
+

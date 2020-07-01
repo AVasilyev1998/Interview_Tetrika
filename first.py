@@ -84,3 +84,4 @@ if __name__ == '__main__':
     print(f'search pairs res: {res}')
     res = search_pairs_pythonic(array, 900)
     print(f'search pairs pythonic res: {res}')
+    # сложность решения без itertools O(2n) что соответствует O(n)
